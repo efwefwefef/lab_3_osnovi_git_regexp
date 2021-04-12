@@ -3,9 +3,15 @@ public class lab_3 {
 
     public static void main(String[] args)
     {
-        String[] mm = FileParser.GeTextStats();
+        try {
+            String[] mm = FileParser.GeTextStats();
 
-        for(String i : mm)
-            System.out.println(i);
+            for (String i : mm)
+                System.out.println(i);
+        }catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

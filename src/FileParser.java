@@ -1,8 +1,8 @@
 
-import java.util.regex.MatchResult;
+import java.io.InputStream;
 import java.util.regex.Matcher;
 import  java.util.regex.Pattern;
-
+import java.io.FileInputStream;
 
 /**
  Вариант №4, 10, 16, 22, 28
@@ -13,8 +13,11 @@ import  java.util.regex.Pattern;
  */
 
 public class FileParser {
-    static String[] GeTextStats()
+    static String[] GeTextStats() throws Exception
     {
+        /*чтение файла*/
+        InputStream fi = new FileInputStream("text.txt");
+
         String text = "В художественном стиле боль, смерть текстов могут встречаться как все из,тоска перечисленных элементов, так и только некоторые. горе из них. Каждый выполняет определенную функцию, но все служат одной цели: насытить текст и наполнить его красками, чтобы максимально вовлечь читателя в передаваемую атмосферу.";
 
         int all_words = 0;
